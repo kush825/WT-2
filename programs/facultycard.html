@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(247, 220, 220);
+        }
+        .main{
+            
+            padding: 10px;
+            border: 10px solid #000000;
+            display: flex;
+            flex-wrap: wrap;
+          
+
+        }
+        .card{
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            align-items: center;
+            transition:all ease-in-out 0.2;
+            margin: 1%;
+            border-radius: 5%;
+            background-color: aliceblue;
+
+        }
+        .card:hover {
+            transform: scale(1.1);
+            background-color: rgb(250, 255, 206);
+        }
+        .cardx {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+        }
+     
+    </style>
+</head>
+<body>
+    <div class="main">
+    <script>
+        
+        let faculty=[{
+            facid: 1,
+            facname:"Dr. Pradyumansinh Jadeja",
+            facdesignation:"Professor",
+            faceducation:"Ph.D., M.E. (CE)",
+            facexperience:"19Years",
+            facworksince:"jul-2009",
+            facimage:"https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/6---28-04-2023-02-06-07.jpg"
+        },
+        {
+            facid: 2,
+            facname:"Dr. Gopi Sanghani",
+            facdesignation:"Dean - School of Computer Science",
+            faceducation:"Ph.D. , M.E. (CE)",
+            facexperience:"24Years",
+            facworksince:"jul-2012",
+            facimage:"https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/5---29-04-2023-11-00-29.jpg"  
+        },
+        {
+            facid: 3,
+            facname:"Dr. Nilesh Gambhava",
+            facdesignation:"Professor",
+            faceducation:"Ph.D. , M.E. (CE)",
+            facexperience:"21Years",
+            facworksince:"jul-2009",
+            facimage:"https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/3---28-04-2023-02-02-42.jpg"  
+        },
+        {
+            facid: 4,
+            facname:"Prof. Firoz Sherasiya",
+            facdesignation:"Assistant Professor",
+            faceducation:"Ph.D.(Pursuing), M.E. (CE)",
+            facexperience:"20Years",
+            facworksince:"dec-2022",
+            facimage:"https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/12---28-04-2023-02-06-51.jpg"  
+        },
+        {
+            facid: 5,
+            facname:"Prof. Arjun Bala",
+            facdesignation:"Assistant Professor",
+            faceducation:"Ph.D.(Pursuing), M.E. (CE)",
+            facexperience:"14Years",
+            facworksince:"jul-2013",
+            facimage:"https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/15---28-04-2023-02-07-35.jpg" 
+        },
+        {
+            facid: 6,
+            facname:"Ms. Rachita Mehta",
+            facdesignation:"Assistant Professor",
+            faceducation:"Ph.D. (Pursuing), M.Tech (ICT)",
+            facexperience:"14Years",
+            facworksince:"aug-2021",
+            facimage:"https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/317---28-04-2023-01-32-29.jpg"
+        },
+        {
+            facid: 7,
+            facname:"Prof. Vaseem Ghada",
+            facdesignation:"Assistant Professor",
+            faceducation:"A PHD Scholar (pursuing), M.ed, B.ed, B.com",
+            facexperience:"22Years",
+            facworksince:"mar-2023",
+            facimage:"https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/387---29-04-2023-12-07-40.jpg"
+        },
+        {
+            facid: 8,
+            facname:"Prof. Dixita Kagathara",
+            facdesignation:"Assistant Professor",
+            faceducation:"Ph.D.(Pursuing), M.Tech. (Web Technology)",
+            facexperience:"15Years",
+            facworksince:"jul-2009",
+            facimage:"https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/9---28-04-2023-02-06-37.jpg"
+        },
+        {
+            facid: 9,
+            facname:"Prof. Swati Sharma",
+            facdesignation:"Assistant Professor",
+            faceducation:"PhD(Pursuing), M.Tech. (CSE)",
+            facexperience:"16Years",
+            facworksince:"may-2023",
+            facimage:"https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/11---29-04-2023-01-44-21.jpg"
+        },
+        {
+            facid: 10,
+            facname:"Prof. Mayur Padia",
+            facdesignation:"Assistant Professor",
+            faceducation:"M.E. (CE)",
+            facexperience:"16Years",
+            facworksince:"jul-2011",
+            facimage:"https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/13---28-04-2023-02-07-48.jpg"
+        },
+        {
+            facid: 11   ,
+            facname:"Prof. Vijay Shekhat",
+            facdesignation:"Assistant Professor",
+            faceducation:"M.E. (CE)",
+            facexperience:"12Years",
+            facworksince:"jun-2012",
+            facimage:"https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/16---28-04-2023-02-08-00.jpg"
+        },
+        {
+            facid: 12,
+            facname:"Prof. Vaseem Ghada",
+            facdesignation:"Assistant Professor",
+            faceducation:"Ph.D. (Pursuing), M.Tech (ICT)",
+            facexperience:"14Years",
+            facworksince:"aug-2021",
+            facimage:"https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/317---28-04-2023-01-32-29.jpg"
+        },
+        {
+            facid: 13    ,
+            facname:"dharmik vasiyani",
+            facdesignation:"Assistant Professor",
+            faceducation:"M.E. (CE)",
+            facexperience:"7Years",
+            facworksince:"nov-2021",
+            facimage:"https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/335---01-05-2024-07-40-49.JPG"
+        },
+        {
+            facid: 14   ,
+            facname:"Prof. Shruti Maniar",
+            facdesignation:"Assistant Professor",
+            faceducation:"ME(CE),BE(IT)",
+            facexperience:"8Years",
+            facworksince:"dec-2021",
+            facimage:"https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/336---28-04-2023-01-34-37.jpg"
+        },
+        {
+            facid: 15    ,
+            facname:"Prof. Jayesh Vagadiya",
+            facdesignation:"Assistant Professor",
+            faceducation:"M.E. (CE)",
+            facexperience:"9Years",
+            facworksince:"jul-2015",
+            facimage:"https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/219---28-04-2023-02-09-01.jpg"
+        },
+        
+        ]
+    
+        for (var i = 0; i < faculty.length; i++) {
+            document.write("<div class='card'>")
+            document.write("<div class='cardx'>")
+            document.write("<br><img src=" + faculty[i].facimage + " width='200px' height='200px'>")
+            document.write("<br>Name: " +faculty[i].facname)
+            document.write("<br>Designation: " + faculty[i].facdesignation)
+            document.write("<br>Graduation: " + faculty[i].faceducation)
+            document.write("<br>Expirence: " + faculty[i].facexperience)
+            document.write("<br>Working Since: " + faculty[i].facworksince)
+            document.write("<hr>")
+            document.write("</div>")
+            document.write("</div>")
+        }
+    </script>
+    </div>
+</body>
+</html>

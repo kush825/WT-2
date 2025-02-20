@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Find Word</h2>
+    <script>
+        // Write a javascript that uses a loop that searches a word in sentence held in an array , reatur index of word use prompt
+        var sentence = prompt("Enter a sentence:");
+        var word = prompt("Enter a word to find:");
+        var words = sentence.split(" ");
+        var wordIndex = -1;
+        for (var i = 0; i < words.length; i++) {
+            if (words[i] == word) {
+                wordIndex = i;
+            }
+            {
+                wordIndex = -1;
+            }
+            {
+                alert("Word not found in the sentence");
+                }
+            }
+            alert("Word found at index " + wordIndex);
+            </script>
+            <button onclick="myFunction()">Click me</button>
+            <script>    
+                function myFunction() {
+                    location.reload();
+                    }
+                    </script>
+                    </body>
+                    </html>

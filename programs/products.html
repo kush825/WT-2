@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(247, 220, 220);
+        }
+        .main{
+            
+            padding: 10px;
+            border: 10px solid #000000;
+            display: flex;
+            flex-wrap: wrap;
+          
+
+        }
+        .product{
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            align-items: center;
+            transition:all ease-in-out 0.2;
+            margin: 1%;
+            border-radius: 5%;
+            background-color: aliceblue;
+
+        }
+        .product:hover {
+            transform: scale(1.1);
+            background-color: rgb(250, 255, 206);
+        }
+        .productx {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+        }
+     
+    </style>
+</head>
+<body>
+    <div class="main">
+    <script>
+        
+        let products=[{
+            produid: 1,
+            produuname:"frezz",
+            rating:5,
+            warranty:2
+        },
+        {
+            produid: 2,
+            produuname:"TV",
+            rating:3,
+            warranty:3  
+        },
+        {
+            produid: 3,
+            produuname:"camera",
+            rating:4.5,
+            warranty:4 
+        },
+        {
+            produid: 4,
+            produuname:"fan",
+            rating:2.5,
+            warranty:2
+        },
+        {
+            produid: 5,
+            produuname:"computer",
+            rating:3,
+            warranty:4
+        },
+        {
+            produid: 6,
+            produuname:"laptop",
+            rating:4.5,
+            warranty:5 
+        }
+        ]
+    
+        for (var i = 0; i < products.length; i++) {
+            document.write("<div class='product'>")
+            document.write("<div class='productsx'>")
+            document.write("<br>productid: " +products[i].produid)
+            document.write("<br>productname: " + products[i].produuname)
+            document.write("<br>rating: " + products[i].rating)
+            document.write("<br>warranty: " + products[i].warranty)
+            document.write("<hr>")
+            document.write("</div>")
+            document.write("</div>")
+        }
+    </script>
+    </div>
+</body>
+</html>

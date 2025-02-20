@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(247, 220, 220);
+        }
+        .main{
+            
+            padding: 10px;
+            border: 10px solid #000000;
+            display: flex;
+            flex-wrap: wrap;
+          
+
+        }
+        .card{
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            align-items: center;
+            transition:all ease-in-out 0.2;
+            margin: 1%;
+            border-radius: 5%;
+            background-color: aliceblue;
+
+        }
+        .card:hover {
+            transform: scale(1.1);
+            background-color: rgb(250, 255, 206);
+        }
+        .cardx {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+        }
+     
+    </style>
+</head>
+<body>
+    <div class="main">
+    <script>
+        
+        let Student=[{
+            studid: 1,
+            stduname:"Vaibhav",
+            Enrollment:24010101681,
+            course:"B.Tech"
+        },
+        {
+            studid: 2,
+            stduname:"Karan",
+            Enrollment:24010101632,
+            course:"B.Tech"  
+        },
+        {
+            studid: 3,
+            stduname:"Shyam",
+            Enrollment:240101016969,
+            course:"B.Tech"  
+        },
+        {
+            studid: 4,
+            stduname:"karan jat",
+            Enrollment:24010101640,
+            course:"B.Tech"  
+        },
+        {
+            studid: 5,
+            stduname:"rahul",
+            Enrollment:24010101720,
+            course:"B.Tech"  
+        },
+        {
+            studid: 6,
+            stduname:"rudresh",
+            Enrollment:24010101555,
+            course:"B.Tech"  
+        }
+        ]
+    
+        for (var i = 0; i < Student.length; i++) {
+            document.write("<div class='card'>")
+            document.write("<div class='cardx'>")
+            document.write("<br>Name: " +Student[i].studid)
+            document.write("<br>Designation: " + Student[i].stduname)
+            document.write("<br>Graduation: " + Student[i].Enrollment)
+            document.write("<br>Expirence: " + Student[i].course)
+            document.write("<hr>")
+            document.write("</div>")
+            document.write("</div>")
+        }
+    </script>
+    </div>
+</body>
+</html>

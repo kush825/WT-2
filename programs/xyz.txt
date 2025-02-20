@@ -1,0 +1,6 @@
+studentid:01
+student_name:kush
+student_eroll:24010101669
+student_mno:4243245354
+student_dept:CSE
+student_spi:6.11
